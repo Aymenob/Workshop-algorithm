@@ -1,6 +1,6 @@
 ALGORITHM algorithm_name
 VAR 
-     sentence: STRING//exmp="this is my first algorithm"
+     sentence: STRING[50]//exmp="this is my first algorithm"
      WordsCounter:INTEGER:=1
      vowels:INTEGER:=0 
      i:INTEGER:=0
