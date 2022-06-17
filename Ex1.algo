@@ -5,6 +5,7 @@ VAR
      vowels:INTEGER:=0 
      i:INTEGER:=0
 BEGIN
+   Write("write your sentence")
    Read(sentence)
    FOR i FROM  0 TO sentence.length-1 STEP step  DO
    IF (sentence[i]==="") THEN
