@@ -1,0 +1,20 @@
+ALGORITHM algorithm_name
+VAR 
+     sentence: STRING//exmp="this is my first algorithm"
+     WordsCounter:INTEGER:=1
+     vowels:INTEGER:=0 
+     i:INTEGER:=0
+BEGIN
+   Read(sentence)
+   FOR i FROM  0 TO sentence.length-1 STEP step  DO
+   IF (sentence[i]==="") THEN
+      WordsCounter:= WordsCounter+1
+      ELSE_IF (sentence[i]==="a","e","y","u","i","o") THEN
+        vowels:=vowels+1
+      
+   END_IF
+   END_FOR
+   Write("WordsCounter ",WordsCounter)
+   Write("Vowels ",Vowels)
+   Write("sentence lenght ",sentence.length)
+END
