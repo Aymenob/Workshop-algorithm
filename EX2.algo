@@ -1,0 +1,28 @@
+ALGORITHM algorithm_chekpoint2
+VAR
+    set1 : ARRAY_OF INTEGER[4];
+    set2 : ARRAY_OF INTEGER[4];
+    i:INTEGER:=0
+    b:INTEGER:=0
+    Sum_overlapping:INTEGER:=0
+    Sum_ofdistinct :INTEGER:=0
+    
+BEGIN
+    set1:{12,13,6,10} // pre-definie ?
+    set2:{13,10,16,15}
+    FOR i FROM 0 TO  set1.length-1 step DO
+      FOR j FROM 0 TO set2.length-1 STEP step  DO
+ 
+    IF (set1[i]=set2[j]) THEN
+       Sum_overlapping=Sum_overlapping+set1[i]*2
+    ELSE
+       Sum_ofdistinct=Sum_ofdistinct+set[i]
+
+    END_IF
+
+     END_FOR
+
+    END_FOR
+        
+    
+END
