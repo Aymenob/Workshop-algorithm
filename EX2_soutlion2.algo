@@ -1,0 +1,34 @@
+ALGORITHM algorithm_name
+VAR
+    set:HASH_TABLE<INTEGER,INTEGER>
+    i:INTEGER:=1
+    n:INTEGER:=0
+    x:INTEGER:=0
+    Sum_overlapping:INTEGER:=0
+    Sum_ofdistinct :INTEGER:=0
+BEGIN
+    // User choosing the hash array elements size
+    Write("insert the number of elements")
+    Read(n)                                      
+    //insertion of key values in the Hash array  (in this case the user will not be able to insert more than 2 duplicates following our given examples)
+    WHILE(i<=n) DO                                  
+        Write("type your set key")
+        Read(x)
+        IF (set.lookup(x)=="TRUE") THEN
+            set.insert(x,2)
+         
+        ELSE
+            set.insert(x,1)
+        END_IF
+        i:=i+1
+    END_WHILE
+    // counting of overlapping and distincts elements
+    FOR item in set  DO 
+    IF(item[1]== 1) THEN
+        Sum_ofdistinct = Sum_ofdistinct + item[0]
+        ELSE
+        Sum_overlapping = Sum_overlapping + (item[0]*item[1])
+    END_IF
+    END_FOR
+END
+    
