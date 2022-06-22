@@ -1,0 +1,37 @@
+
+
+PROCEDURE Dot(Table1,Ttable2: ARRAY_OF FLOAT[n], VAR v : FLOAT)
+VAR
+    i: INTEGER := 0;
+BEGIN
+    FOR i FROM 0 TO n-1 STEP step  DO
+    v := v + Table1[i]*Table2[i]
+    END_FOR
+END
+
+ALGORITHM Dot_product
+VAR
+    vectors_Number,n :INTEGER
+    dot : FLOAT :=0;
+    v1,v2 : ARRAY_OF FLOAT[n];
+BEGIN
+    write("type the number of repeated vectors")
+    Read(vectors_Number)
+    Write("type the elements of v1 and v2 respectively")
+
+    Write("the length of v1 and v2")
+    Read(n)
+
+    FOR i FROM 0 TO vectors_Number-1 STEP   DO 
+    Read(v1[i])
+    Read(v2[i])
+    END_FOR
+    Dot(v1,v2, dot)
+    Write(dot)
+    IF (dot==0) THEN
+    Write("V1 et V2 are orthogonal")
+    ELSE 
+    Write("v1 et v2 are not orthogonal")
+    END_IF 
+
+END
